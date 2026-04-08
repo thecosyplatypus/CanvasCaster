@@ -69,7 +69,7 @@ async def handler(request):
         html = f"""<!DOCTYPE html>
 <html>
 <head>
-<title>Spelly Art</title>
+<title>CanvasCaster</title>
 <meta http-equiv="refresh" content="600">
 <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -77,7 +77,7 @@ async def handler(request):
     img {{ max-width: 1920px; max-height: 1080px; object-fit: contain; }}
 </style>
 </head>
-<body><img src="{image_url}" alt="Spelly Art"></body>
+<body><img src="{image_url}" alt="CanvasCaster"></body>
 </html>"""
 
     return web.Response(text=html, content_type='text/html')

@@ -45,7 +45,7 @@ Edit `config.json`:
 ### 4. Run the Bot
 
 ```bash
-python spellyart.py
+python canvas_caster.py
 ```
 
 The web server will be available at `http://localhost:8765`
