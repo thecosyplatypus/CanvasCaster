@@ -78,10 +78,14 @@ Shows images from a Discord channel on a webpage. Simple as that.
    ```
    python canvas_caster.py
    ```
+   or
+   ```
+   py canvas_caster.py
+   ```
    - **Linux/Mac:** If that doesn't work, try: `python3 canvas_caster.py`
-3. Press Enter
-4. Wait a few seconds, then open your browser
-5. Go to: `http://localhost:8765`
+4. Press Enter
+5. Wait a few seconds, then open your browser
+6. Go to: `http://localhost:8765`
 
 You should see images from your Discord channel!
 
@@ -99,7 +103,7 @@ You should see images from your Discord channel!
 - **Linux/Mac:** Try `pip3 install -r requirements.txt`
 
 **"pip" is not recognized**
-- **Windows:** Use `py -m pip install -r requirements.txt` or `py canvas_caster.py`
+- **Windows:** Use `py -m pip install -r requirements.txt`
 - **Linux:** Install pip with `sudo apt install python3-pip` (Ubuntu/Debian) or `sudo dnf install python3-pip` (Fedora)
 
 **Port already in use**
