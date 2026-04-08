@@ -140,6 +140,10 @@ Now your Discord images will show up in your stream!
 | `channel_id` | Discord channel to watch | Required |
 | `port` | Web server port number | 8765 |
 | `time` | Seconds between image changes and channel checks | 10 |
+| `width`| Canvas width in pixels | 1920 |
+| `height` | Canvas height in pixels | 1080 |
+| `text_size` | Artist name text size in pixels | 40 |
+| `text_color` | Artist name text color (hex) | #fff |
 
 ## Need Help?
 
