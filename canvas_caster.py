@@ -54,6 +54,17 @@ async def rotate_image():
     print(f"Displaying image {current_index + 1}/{len(image_queue)}: {image_queue[current_index]}")
 
 
+async def status_handler(request):
+    global image_queue, current_index
+    config = reload_config()
+    data = {
+        'image': image_queue[current_index] if image_queue else None,
+        'time': config.get('time', 10),
+        'count': len(image_queue)
+    }
+    return web.json_response(data)
+
+
 async def handler(request):
     global image_queue, current_index
 
@@ -69,14 +80,32 @@ async def handler(request):
 <html>
 <head>
 <title>CanvasCaster</title>
-<meta http-equiv="refresh" content="600">
 <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     body {{ display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #000; }}
     img {{ max-width: 1920px; max-height: 1080px; object-fit: contain; }}
 </style>
 </head>
-<body><img src="{image_url}" alt="CanvasCaster"></body>
+<body>
+<img id="canvas-img" src="{image_url}" alt="CanvasCaster">
+<script>
+    let lastImage = "{image_url}";
+    async function update() {{
+        try {{
+            const res = await fetch('/status');
+            const data = await res.json();
+            if (data.image && data.image !== lastImage) {{
+                document.getElementById('canvas-img').src = data.image;
+                lastImage = data.image;
+            }}
+            setTimeout(update, data.time * 1000);
+        }} catch (e) {{
+            setTimeout(update, 10000);
+        }}
+    }}
+    update();
+</script>
+</body>
 </html>"""
 
     return web.Response(text=html, content_type='text/html')
@@ -85,6 +114,7 @@ async def handler(request):
 async def start_server():
     app = web.Application()
     app.router.add_get('/', handler)
+    app.router.add_get('/status', status_handler)
     runner = web.AppRunner(app)
     await runner.setup()
     site = web.TCPSite(runner, 'localhost', PORT)
