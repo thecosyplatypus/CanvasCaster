@@ -57,14 +57,14 @@ Shows images from a Discord channel on a webpage. Simple as that.
 
 1. Open `config.json` in a text editor (like Notepad, nano, or vim)
 2. Fill in your details:
-   ```json
-   {
-       "token": "paste your bot token here",
-"channel_id": 123456789012345678,
-        "port": 8765,
-        "image_duration": 600
-   }
-   ```
+```json
+{
+    "token": "paste your bot token here",
+    "channel_id": 123456789012345678,
+    "port": 8765,
+    "image_duration": 600
+}
+```
    - Replace the token with your bot token from Step 1
    - Replace the channel_id with the number you copied in Step 3
    - Change `image_duration` to how many seconds each image shows (default is 600 = 10 mins)
