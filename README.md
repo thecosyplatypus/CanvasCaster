@@ -55,12 +55,8 @@ Shows images from a Discord channel on a webpage. Simple as that.
 
 ## Step 5: Configure the Bot
 
-1. In the CanvasCaster folder, find `config.example.json`
-2. Make a copy and rename it to `config.json`:
-   - Open terminal in this folder and type: `copy config.example.json config.json`
-   - Or on Linux/Mac: `cp config.example.json config.json`
-3. Open `config.json` in a text editor (like Notepad, nano, or vim)
-4. Fill in your details:
+1. Open `config.json` in a text editor (like Notepad, nano, or vim)
+2. Fill in your details:
    ```json
    {
        "token": "paste your bot token here",
@@ -71,7 +67,7 @@ Shows images from a Discord channel on a webpage. Simple as that.
    ```
    - Replace the token with your bot token from Step 1
    - Replace the channel_id with the number you copied in Step 3
-5. Save and close the file
+3. Save and close the file
 
 ## Step 6: Run It!
 
