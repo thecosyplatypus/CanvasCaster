@@ -87,16 +87,15 @@ async def handler(request):
 </style>
 </head>
 <body>
-<img id="canvas-img" src="{image_url}" alt="CanvasCaster">
+<img id="canvas-img" alt="CanvasCaster">
 <script>
-    let lastImage = "{image_url}";
     async function update() {{
         try {{
             const res = await fetch('/status');
             const data = await res.json();
-            if (data.image && data.image !== lastImage) {{
-                document.getElementById('canvas-img').src = data.image;
-                lastImage = data.image;
+            if (data.image) {{
+                const img = document.getElementById('canvas-img');
+                img.src = data.image + '?t=' + Date.now();
             }}
             setTimeout(update, data.time * 1000);
         }} catch (e) {{
