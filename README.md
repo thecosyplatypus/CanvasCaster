@@ -60,8 +60,8 @@ Shows images from a Discord channel on a webpage. Simple as that.
    ```json
    {
        "token": "paste your bot token here",
-       "channel_id": 123456789012345678,
-"port": 8765,
+"channel_id": 123456789012345678,
+        "port": 8765,
         "image_duration": 600
    }
    ```
@@ -137,7 +137,7 @@ Now your Discord images will show up in your stream!
 | `token` | Your Discord bot token | Required |
 | `channel_id` | Discord channel to watch | Required |
 | `port` | Web server port number | 8765 |
-| `time` | How long each image shows (seconds) | 10 |
+| `image_duration` | How long each image shows (seconds) | 600 |
 
 ## Need Help?
 

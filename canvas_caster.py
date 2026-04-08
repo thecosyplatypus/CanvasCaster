@@ -105,7 +105,7 @@ async def status_handler(request):
     config = reload_config()
     data = {
         'image': image_queue[current_index] if image_queue else None,
-        'time': config.get('time', 10)
+        'image_duration': config.get('image_duration', 600)
     }
     return web.json_response(data)
 
@@ -130,7 +130,7 @@ async def rotation_loop():
     global last_fetch_time
     while True:
         config = reload_config()
-        cycle_time = config.get('time', 10)
+        cycle_time = config.get('image_duration', 600)
         await asyncio.sleep(cycle_time)
         current_time = datetime.datetime.now()
         if last_fetch_time and (current_time - last_fetch_time).total_seconds() >= cycle_time:
