@@ -1,4 +1,4 @@
-# Spelly Art Bot
+# CanvasCaster
 
 A Discord bot that displays images from a channel on a local web server, rotating through them automatically.
 
