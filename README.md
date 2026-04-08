@@ -106,6 +106,27 @@ You should see images from your Discord channel!
 **Permission denied (Linux/Mac)**
 - Make the script executable: `chmod +x canvas_caster.py`
 
+## Use with OBS
+
+You can display the images in OBS as a browser source!
+
+1. Make sure CanvasCaster is running (`python canvas_caster.py`)
+2. Open OBS
+3. Click the **+** button under Sources
+4. Select **Browser Source**
+5. Name it (e.g., "CanvasCaster") and click OK
+6. In the URL box, enter:
+   ```
+   http://localhost:8765
+   ```
+7. Set the **Width** to `1920` and **Height** to `1080`
+8. Click OK
+9. Resize and position the source on your scene
+
+Now your Discord images will show up in your stream!
+
+**Tip:** If you want it to show on both your stream and preview, just resize the browser source. If you only want it on stream, right-click the source and select "Transform" > "Fit to Screen" and enable "Render off-screen to files" in OBS settings.
+
 ## Need Help?
 
 Open an issue on GitHub: https://github.com/thecosyplatypus/CanvasCaster/issues
