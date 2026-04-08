@@ -65,10 +65,11 @@ Shows images from a Discord channel on a webpage. Simple as that.
        "time": 10
    }
    ```
-   - Replace the token with your bot token from Step 1
-   - Replace the channel_id with the number you copied in Step 3
-   - Change `time` to how many seconds each image shows before refreshing (default is 10 seconds)
+    - Replace the token with your bot token from Step 1
+    - Replace the channel_id with the number you copied in Step 3
+    - Change `time` to how many seconds between each image change (default is 10 seconds)
 3. Save and close the file
+4. **Tip:** You can change the `time` value while the bot is running - it will update automatically!
 
 ## Step 6: Run It!
 
