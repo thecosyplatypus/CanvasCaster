@@ -12,8 +12,6 @@ with open('config.json', 'r') as f:
 TOKEN = config['token']
 CHANNEL_ID = config['channel_id']
 PORT = config['port']
-FETCH_INTERVAL = config['fetch_interval']
-IMAGE_DURATION = config.get('image_duration', 10)
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -103,11 +101,10 @@ async def rotation_loop():
     global last_fetch_time
     while True:
         config = reload_config()
-        image_duration = config.get('image_duration', 10)
-        await asyncio.sleep(image_duration)
+        cycle_time = config.get('time', 10)
+        await asyncio.sleep(cycle_time)
         current_time = datetime.datetime.now()
-        fetch_interval = config.get('fetch_interval', 300)
-        if last_fetch_time and (current_time - last_fetch_time).total_seconds() >= fetch_interval:
+        if last_fetch_time and (current_time - last_fetch_time).total_seconds() >= cycle_time:
             await fetch_channel_images()
         if image_queue:
             await rotate_image()

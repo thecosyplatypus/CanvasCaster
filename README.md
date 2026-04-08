@@ -62,13 +62,12 @@ Shows images from a Discord channel on a webpage. Simple as that.
        "token": "paste your bot token here",
        "channel_id": 123456789012345678,
        "port": 8765,
-       "fetch_interval": 3600,
-       "image_duration": 600
+       "time": 10
    }
    ```
    - Replace the token with your bot token from Step 1
    - Replace the channel_id with the number you copied in Step 3
-   - Change `image_duration` to how many seconds each image shows (default is 600 = 10 mins)
+   - Change `time` to how many seconds each image shows before refreshing (default is 10 seconds)
 3. Save and close the file
 
 ## Step 6: Run It!
@@ -138,8 +137,7 @@ Now your Discord images will show up in your stream!
 | `token` | Your Discord bot token | Required |
 | `channel_id` | Discord channel to watch | Required |
 | `port` | Web server port number | 8765 |
-| `fetch_interval` | How often to check for new images (seconds) | 3600 |
-| `image_duration` | How long each image shows (seconds) | 600 |
+| `time` | Seconds between image changes and channel checks | 10 |
 
 ## Need Help?
 
