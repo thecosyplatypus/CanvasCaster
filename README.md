@@ -138,8 +138,7 @@ Now your Discord images will show up in your stream!
 | `token` | Your Discord bot token | Required |
 | `channel_id` | Discord channel to watch | Required |
 | `port` | Web server port number | 8765 |
-| `fetch_interval` | How often to check for new images (seconds) | 600 |
-| `image_duration` | How long each image shows (seconds) | 600 |
+| `time` | How long each image shows (seconds) | 10 |
 
 ## Need Help?
 
