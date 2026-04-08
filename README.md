@@ -57,8 +57,8 @@ Shows images from a Discord channel on a webpage. Simple as that.
 
 1. In the CanvasCaster folder, find `config.example.json`
 2. Make a copy and rename it to `config.json`:
-   - **Windows:** Right-click the file, select **Copy**, then right-click and select **Paste**
-   - **Linux/Mac:** Open terminal and type: `cp config.example.json config.json`
+   - Open terminal in this folder and type: `copy config.example.json config.json`
+   - Or on Linux/Mac: `cp config.example.json config.json`
 3. Open `config.json` in a text editor (like Notepad, nano, or vim)
 4. Fill in your details:
    ```json
