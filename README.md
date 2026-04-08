@@ -40,8 +40,11 @@ Shows images from a Discord channel on a webpage. Simple as that.
 ## Step 4: Set Up the Files
 
 1. Download CanvasCaster from GitHub
-2. Open the folder and right-click inside the folder
-3. Select **Open in Terminal** (or **Open PowerShell window here**)
+2. Open the folder
+3. Open a terminal in this folder:
+   - **Windows:** Right-click inside the folder, select **Open in Terminal** or **Open PowerShell window here**
+   - **Linux:** Right-click inside the folder, select **Open in Terminal**, or press `Ctrl + Alt + T` and `cd` to the folder
+   - **Mac:** Open Terminal, type `cd `, drag the folder into the window, and press Enter
 4. Type this and press Enter:
    ```
    pip install -r requirements.txt
@@ -50,8 +53,10 @@ Shows images from a Discord channel on a webpage. Simple as that.
 ## Step 5: Configure the Bot
 
 1. In the CanvasCaster folder, find `config.example.json`
-2. Make a copy and rename it to `config.json`
-3. Open `config.json` in a text editor (like Notepad)
+2. Make a copy and rename it to `config.json`:
+   - **Windows:** Right-click the file, select **Copy**, then right-click and select **Paste**
+   - **Linux/Mac:** Open terminal and type: `cp config.example.json config.json`
+3. Open `config.json` in a text editor (like Notepad, nano, or vim)
 4. Fill in your details:
    ```json
    {
@@ -71,6 +76,7 @@ Shows images from a Discord channel on a webpage. Simple as that.
    ```
    python canvas_caster.py
    ```
+   - **Linux/Mac:** If that doesn't work, try: `python3 canvas_caster.py`
 2. Press Enter
 3. Wait a few seconds, then open your browser
 4. Go to: `http://localhost:8765`
@@ -88,10 +94,18 @@ You should see images from your Discord channel!
 
 **"Module not found" error**
 - Make sure you ran `pip install -r requirements.txt`
+- **Linux/Mac:** Try `pip3 install -r requirements.txt`
+
+**"pip" is not recognized**
+- **Windows:** Use `py -m pip install -r requirements.txt`
+- **Linux:** Install pip with `sudo apt install python3-pip` (Ubuntu/Debian) or `sudo dnf install python3-pip` (Fedora)
 
 **Port already in use**
 - Change `"port": 8765` to something else like `"port": 8080`
 - Then visit `http://localhost:8080`
+
+**Permission denied (Linux/Mac)**
+- Make the script executable: `chmod +x canvas_caster.py`
 
 ## Need Help?
 
