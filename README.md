@@ -24,7 +24,7 @@ A Discord bot that displays images from a channel on a local web server, rotatin
 
 ```bash
 # Install dependencies
-pip install discord aiohttp
+pip install -r requirements.txt
 
 # Copy the example config
 copy config.example.json config.json
