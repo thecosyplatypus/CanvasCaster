@@ -99,7 +99,7 @@ You should see images from your Discord channel!
 - **Linux/Mac:** Try `pip3 install -r requirements.txt`
 
 **"pip" is not recognized**
-- **Windows:** Use `py -m pip install -r requirements.txt`
+- **Windows:** Use `py -m pip install -r requirements.txt` or `py canvas_caster.py`
 - **Linux:** Install pip with `sudo apt install python3-pip` (Ubuntu/Debian) or `sudo dnf install python3-pip` (Fedora)
 
 **Port already in use**
